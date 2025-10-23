@@ -53,6 +53,15 @@ let resultText = "";
        resultText = ('You Lose');
        computerScore++;
      }
+              if (humanScore + computerScore === 5) {
+      if (humanScore > computerScore) {
+        finalResult.textContent = "🎉 You won the best of 5!";
+      } else if (humanScore < computerScore) {
+        finalResult.textContent = "💻 Computer won the best of 5!";
+      } else {
+        finalResult.textContent = "🤝 It's a tie!";
+      }
+    }
      return resultText;
     }
 const buttons = document.querySelectorAll("button");
@@ -65,6 +74,8 @@ buttons.forEach(button => {
      score.textContent = `Human: ${humanScore} — Computer: ${computerScore}`;
   });
 });
+
+
 
 
 
